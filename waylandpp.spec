@@ -93,6 +93,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libwayland-client-extra++.so
 %attr(755,root,root) %{_libdir}/libwayland-cursor++.so
 %attr(755,root,root) %{_libdir}/libwayland-egl++.so
+%dir %{_datadir}/waylandpp
+%dir %{_datadir}/waylandpp/protocols
+%{_datadir}/waylandpp/protocols/*.xml
 %{_includedir}/wayland-client*.hpp
 %{_includedir}/wayland-cursor.hpp
 %{_includedir}/wayland-egl.hpp
