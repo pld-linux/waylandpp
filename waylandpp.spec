@@ -5,11 +5,12 @@
 Summary:	Wayland C++ bindings
 Name:		waylandpp
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0:	https://github.com/NilsBrause/waylandpp/archive/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	2b0892152599210e9797a0651a119f65
+Patch0:		gcc-13.patch
 URL:		https://nilsbrause.github.io/waylandpp_docs/
 BuildRequires:	cmake >= 3.4
 %{?with_apidocs:BuildRequires:	doxygen}
@@ -53,6 +54,7 @@ Waylandpp API documentation.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %cmake -B build \
