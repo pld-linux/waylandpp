@@ -12,6 +12,7 @@ Source0:	https://github.com/NilsBrause/waylandpp/archive/%{version}/%{name}-%{ve
 # Source0-md5:	2b0892152599210e9797a0651a119f65
 Patch0:		gcc-13.patch
 URL:		https://nilsbrause.github.io/waylandpp_docs/
+BuildRequires:	EGL-devel
 BuildRequires:	cmake >= 3.4
 %{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libstdc++-devel >= 6:4.8
@@ -37,6 +38,8 @@ easy to use C++ API to Wayland.
 Summary:	Header files for Waylandpp libraries
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	EGL-devel
+Requires:	libstdc++-devel
 Requires:	pugixml >= 1.4
 Requires:	wayland-devel >= 1.11.0
 Requires:	wayland-egl-devel
